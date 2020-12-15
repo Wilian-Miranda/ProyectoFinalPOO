@@ -8,7 +8,6 @@ const quizCaja = document.querySelector(".caja-Quiz");
 const cajaResultado = document.querySelector(".caja-Resultado");
 const puntajeScore = document.querySelector(".contador-puntaje");
 const puntScore = document.querySelector(".contador-puntaje");
-const ingresarUsuario = document.querySelector(".prefijo-puntaje");
 
 
 let preguntaContador = 0;
@@ -91,7 +90,6 @@ function getResult(element){
         respuestasCorrectas++;
         console.log("correctas:" + respuestasCorrectas)
         colocarPuntaje()
-        console.log(ingresarUsuario)
     }
     else{
         //colocando el rojo verde a la opcion incorrecta
@@ -163,6 +161,8 @@ function quizTerminado(){
     quizResultado();
 
 }
+
+
 //obtener el resultado de quiz
 function quizResultado(){
     cajaResultado.querySelector(".total-preguntas").innerHTML = quiz.length;
@@ -217,8 +217,13 @@ function comenzarQuiz(){
     obtenerNuevaPregunta();
     //crear indicador de respuestas
     respuestasIndicador();
-    console.log(ingresarUsuario)
 }
+
+function usuario(){
+    let usu = document.getElementById('nombre-usuario').value;
+    document.querySelector('.us').innerHTML = usu;
+}
+
 
 window.onload = function(){
     homeCaja.querySelector(".total-preguntas").innerHTML = quiz.length;

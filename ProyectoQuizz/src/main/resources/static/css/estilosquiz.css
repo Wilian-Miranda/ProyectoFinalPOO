@@ -84,12 +84,13 @@ body{
     margin-top: 20px;
 }
 .home-caja div{
+    border: 0px solid black;
     background-color: rgb(226, 223, 223);
     border-radius: 14px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-left: 20px;
-    height: auto;
+    height: 115px;
 
 }
 .home-caja div label{
@@ -107,9 +108,13 @@ body{
     border-radius: 14px;
     font-size: 22px;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     border: none;
     text-align: center;
+}
+
+.home-caja .usuarios .save{
+    transform: translate(380px, -80px);
 }
 
 .btn{

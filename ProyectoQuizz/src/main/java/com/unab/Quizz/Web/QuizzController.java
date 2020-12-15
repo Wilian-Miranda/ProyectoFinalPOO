@@ -19,9 +19,9 @@ public class QuizzController {
 	@GetMapping("/")
 	public String Inicio(/*Model m*/) {
 
-		//var MostrarUsuarios = qDao.findAll();
+		/*var MostrarUsuarios = qDao.findAll();
 
-		//m.addAttribute("user", MostrarUsuarios);
+		m.addAttribute("user", MostrarUsuarios);*/
 
 		return "index";
 	}
@@ -31,6 +31,14 @@ public class QuizzController {
 
 		return "quiz";
 	}
+	
+	@GetMapping("/Puntaje")
+	private String puntaje() {
+
+		return "Puntaje";
+	}
+
+	
 
 	@PostMapping("/guardar")
 	private String guardar(@RequestParam("p1") String P1, @RequestParam("p2") String P2, @RequestParam("p3") String P3,

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<html xmlns:th="http://www.Thymealft.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,13 @@
         <p>Número de preguntas: <span class="total-preguntas">20</span> </p>
         <div class="usuarios">
             <label for="" class="nombre-usuario"><b>Ingresar usuario</b></label><br>
-            <input type="text" class="ingresar-usuario" id="usuario"><br>
+            <input type="text" id="nombre-usuario"><br>
+            
+            <button class="save btn" onclick="usuario()"><b>Guardar</b></button>
+            
         </div>
         <button type="button" class="btn" onclick="comenzarQuiz()"><b>¡Comenzar!</b></button>
-        <a href="/mejorPuntaje.html" id="mejor-puntaje-btn" class="btn"><b>Mejores puntajes</b></a>
+        <a id="mejor-puntaje-btn" class="btn" th:href="@{/Puntaje}"><b>Mejores puntajes</b></a>
     </div>
 
     <div class="caja-Quiz custom-caja hide">
@@ -45,6 +49,11 @@
         <h1>Quiz Resultado</h1>
         <table>
             <tr>
+                <td><b>Usuario</b></td>
+                <td><span><b class="us" id="usar"></b></span></td>
+            </tr>
+            
+            <tr>
                 <td>Total de preguntas</td>
                 <td> <span class="total-preguntas"></span></td>
             </tr>
@@ -68,13 +77,11 @@
                 <td>Tu puntuación final</td>
                 <td> <span class="total-puntaje"></span></td>
             </tr>
-            
         </table>
 
         <button type="button" class="btn" onclick="intentarOtraVezQuiz()"><b>Intentar de nuevo</b></button>
-        <button type="button" class="btn"><a href="file:///C:/Users/Jose/Desktop/Pagina%20Web/PROYECTO%20FINAL/index.html"><b>Ir a Inicio</b></a></button>
-
-    </div>
+        
+        <button type="button" class="btn"><a th:href="@{/}"><b>Ir a Inicio</b></a></button> <br>
 
 
 <script src="js/preguntas.js"></script>

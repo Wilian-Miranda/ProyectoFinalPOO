@@ -16,17 +16,9 @@
                 <td>Usuarios</td>
                 <td><span>Puntajes</span></td>
             </tr>
-            <tr>
-                <td class="u1"></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td class="u2"></td>
-                <td><span></span></td>
-            </tr>
-            <tr>
-                <td class="u3"></td>
-                <td><span></span></td>
+            <tr th:each="User:${user}">
+                <td th:text="${User.nombre}" class="u1"></td>
+                <td th:text="${User.puntaje}"></td>
             </tr>
         </table>
     </div>

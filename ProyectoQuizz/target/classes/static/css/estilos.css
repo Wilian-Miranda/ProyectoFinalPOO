@@ -8,6 +8,28 @@
 
 }
 
+#contacto{
+    max-width: 700px;
+    height: auto;
+    background-color:white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 14px;
+
+}
+#contacto .nom{
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border-radius: 14px;
+}
+#contacto #info{
+    width: auto;
+    text-align: center;
+    background-color: rgb(158, 156, 156);
+    border-radius: 14px;
+}
+
 header{
     width: 900px;
     height: 100px;
@@ -39,7 +61,7 @@ header{
 
 
 .menu{
-    width: 323px;
+    width: 250px;
     height: 55px;
     padding-top: 0px;
     border: 0px solid rgb(0, 0, 0);
@@ -47,10 +69,6 @@ header{
     float: right;
     margin-top: 40px;
     background: rgb(227, 240, 235);
-}
-.contacto{
-    border-top-right-radius: 14px;
-    border-bottom-right-radius: 14px;
 }
 
 

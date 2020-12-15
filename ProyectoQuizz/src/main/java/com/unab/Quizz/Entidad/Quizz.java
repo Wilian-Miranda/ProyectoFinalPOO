@@ -23,26 +23,26 @@ public class Quizz implements Serializable{
 		
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private long id_user;
-		private String nombre;
-		private String puntaje;
+		private long id_Nombre;
+		private String Persona;
+		private String Puntaje;
 		public long getId_user() {
-			return id_user;
+			return id_Nombre;
 		}
 		public void setId_user(long id_user) {
-			this.id_user = id_user;
+			this.id_Nombre = id_user;
 		}
 		public String getNombre() {
-			return nombre;
+			return Persona;
 		}
 		public void setNombre(String nombre) {
-			this.nombre = nombre;
+			this.Persona = nombre;
 		}
 		public String getPuntaje() {
-			return puntaje;
+			return Puntaje;
 		}
 		public void setPuntaje(String puntaje) {
-			this.puntaje = puntaje;
+			this.Puntaje = puntaje;
 		}
 		public static long getSerialversionuid() {
 			return serialVersionUID;

@@ -223,6 +223,10 @@ function usuario(){
     let usu = document.getElementById('nombre-usuario').value;
     document.querySelector('.us').innerHTML = usu;
 }
+function Confirm() {
+    //Ingresamos un mensaje a mostrar
+    var mensaje = confirm("¡GUARDADO!");
+}
 
 
 window.onload = function(){

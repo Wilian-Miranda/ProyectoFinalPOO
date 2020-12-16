@@ -13,15 +13,8 @@ import com.unab.Quizz.Entidad.Quizz;
 @Controller
 public class QuizzController {
 
-	@Autowired
-	private QuizzDAO qDao;
-
 	@GetMapping("/")
-	public String Inicio(/*Model m*/) {
-
-		/*var MostrarUsuarios = qDao.findAll();
-
-		m.addAttribute("user", MostrarUsuarios);*/
+	public String Inicio() {
 
 		return "index";
 	}
@@ -32,10 +25,25 @@ public class QuizzController {
 		return "quiz";
 	}
 	
+	
+	@Autowired
+	private QuizzDAO qDao;
+	
 	@GetMapping("/Puntaje")
-	private String puntaje() {
+	private String puntaje(Model m) {
+
+		var MostrarUsuarios = qDao.findAll();
+
+		m.addAttribute("user", MostrarUsuarios);
 
 		return "Puntaje";
+	}
+	
+	
+	@GetMapping("/nosotros")
+	private String nosotros() {
+
+		return "nosotros";
 	}
 
 	
